@@ -12100,20 +12100,37 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-	name: "STFlashTool",
-	owner: "xiaomi",
-	target: {
-		android_arm64: {
-			srcs: ["proprietary/vendor/bin/STFlashTool"],
-		},
-	},
-	compile_multilib: "64",
-	check_elf_files: false,
-	strip: {
-		none: true,
-	},
-	prefer: true,
-	soc_specific: true,
+    name: "STFlashTool",
+    owner: "xiaomi",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/STFlashTool",
+            ],
+            shared_libs: [
+                "libbase_shim",
+                "libcutils",
+                "libutils",
+                "liblog",
+                "libchrome",
+                "libbase",
+                "libhardware",
+                "libpower",
+                "libz",
+                "libhidlbase",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
 }
 
 cc_prebuilt_binary {
