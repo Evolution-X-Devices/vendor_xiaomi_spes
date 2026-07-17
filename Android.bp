@@ -8,6 +8,23 @@ soong_namespace {
 }
 
 cc_prebuilt_library_shared {
+    name: "libprotobuf-cpp-full-vendor-3.9.1",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libprotobuf-cpp-full-vendor-3.9.1.so"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
 	name: "android.hardware.secure_element@1.0-impl",
 	owner: "xiaomi",
 	strip: {
