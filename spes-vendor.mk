@@ -1022,7 +1022,6 @@ PRODUCT_PACKAGES += \
     com.qualcomm.qti.dpm.api@1.0 \
     libdpmctmgr \
     libdpmfdmgr \
-    libdpmframework \
     libdpmtcm \
     libmmosal \
     libmmparser_lite \
@@ -1032,6 +1031,7 @@ PRODUCT_PACKAGES += \
     lib-imsvtextutils \
     lib-imsvtutils \
     libdiag_system \
+    libdpmframework \
     libfm-hci \
     libimscamera_jni \
     libimsmedia_jni \
